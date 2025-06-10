@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilo.css">
-
-    <!--[if lt IE 9]>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="./js/script.js">
 
     <title>Museu Nacional</title>
+    
+</head>
+<body>
 
     <div id="container"><!--Inicio container-->
         <header>
             <div id="logo">
+                <img src="./imagens/logo.png" alt="">
                 <h1><a href="">Museu Nacional</a></h1>
             </div>
-        
-            <nav>
+
+            <button class="menu-toggle">☰</button>
+            <nav class="menu">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Exposições</a></li>
+                    <li><a href="#exposicoes">Exposições</a></li>
                     <li><a href="#">Pesquisa</a></li>
-                    <li><a href="#">Acervo</a></li>
-                    <li><a href="#">Vídeos</a></li>
-                    <li><a href="#">Fotos</a></li>
+                    <li class="dropdown">
+                        <a href="#">Acervo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Livros</a></li>
+                            <li><a href="#">Manuscritos</a></li>
+                            <li><a href="#">Obras de Arte</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#video">Vídeos</a></li>
+                    <li><a href="#galeria">Fotos</a></li>
                     <li><a href="#">Contato</a></li>
 
                 </ul>
@@ -66,8 +75,8 @@
                     </article>
 
                     <article id="historia">
-                        <h3>200 anos de história</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime animi quis iusto fugiat ullam iure optio, inventore in rem et provident est recusandae, numquam totam quaerat itaque hic cupiditate delectus!<br>
+                        <h3>100 anos de história</h3>
+                        <p>O Museu Nacional celebra um século de dedicação à ciência e à cultura. Fundado para preservar e compartilhar o conhecimento, ao longo dos anos reuniu um acervo valioso, conectando gerações ao passado. Mesmo diante dos desafios, segue como símbolo de aprendizado e memória, mantendo viva a história que nos une.<br>
                         </p>
                         <a href="#"><strong>Leia mais</strong></a>
                     </article>
@@ -76,9 +85,11 @@
             </div>
 
             <aside>
+
                 <section id="depoimento">
                     <img src="./imagens/depoimento.png" alt="">
                 </section>
+            
                 <!--Inicio visita-->
                 <section  id="visita">
                 <h4>Faça uma visita</h4>
@@ -87,13 +98,14 @@
                         <legend>Selecione uma data</legend>
                         
                         <label for="data">Data</label>
-                        <input class="campo" type="text" id="data" value="dd/mm/aaaa">
+                        <input class="campo" type="date" id="data" value="dd/mm">
 
                         <label for="qtd">Qtd pessoas</label>
                         <input class="campo" style="width: 30px;" type="text" id="qtd" value="1">
                     </fieldset>
 
                     <input class="botao" type="submit" value="Verificar disponibilidade">
+
                 </form>
                 </section><!--Fim visita-->
 
@@ -114,29 +126,30 @@
                     </a>
 
                 </section>
-
+            
             </aside>
+
 
         <footer style="clear: both;">
             <p>
-                <a href="#">Home</a>
-                <a href="#">Exposições</a>
+                <a href="#logo">Home</a>
+                <a href="#exposicoes">Exposições</a>
                 <a href="#">Pesquisa</a>
                 <a href="#">Acervo</a>
-                <a href="#">Vídeos</a>
-                <a href="#">Fotos</a>
+                <a href="#video">Vídeos</a>
+                <a href="#galeria">Fotos</a>
                 <a href="#">Contato</a>
             </p>      
-            <p>
-                2019 <a href="#">Museu Nacional</a> - Todos os direitos reservados.
+            <p class="rodape">
+                2025 <a href="#">Museu Nacional</a> - Todos os direitos reservados.
             </p>
          </footer>
 
         </div><!--Fim do principal-->
         
     </div><!--Fim container-->
-</head>
-<body>
+
+    <script src="./js/script.js"></script>
     
 </body>
 </html>
